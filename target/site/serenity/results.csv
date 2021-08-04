@@ -1,0 +1,8 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"This file contains scenarios for the Job Titles","To verify the functionality add the job title","SUCCESS","2021-07-15T07:47:33.561-04:00[America/New_York]","0.0","25.51"
+"This file contains scenarios for the Job Titles","To verify the functionality add the pay grade","SUCCESS","2021-07-15T07:47:59.088-04:00[America/New_York]","0.0","29.24"
+"Orangehrm Login Page feature","Verify Login page title","SUCCESS","2021-07-15T07:48:28.339-04:00[America/New_York]","0.0","7.99"
+"Orangehrm Login Page feature","Verify forgot password link","SUCCESS","2021-07-15T07:48:36.337-04:00[America/New_York]","0.0","7.38"
+"Orangehrm Login Page feature","verify login with corrent credentials","SUCCESS","2021-07-15T07:48:43.726-04:00[America/New_York]","0.0","12.81"
+"This file contains scenarios for the Organization features","To verify the functionality of add the location in the organizations","IGNORED","2021-07-15T07:48:56.537-04:00[America/New_York]","0.0","2.65"
+"This file contains scenarios for the Users","To Verify able to add user in the application","SUCCESS","2021-07-15T07:48:59.193-04:00[America/New_York]","0.0","35.98"

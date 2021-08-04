@@ -1,0 +1,9 @@
+com\pages\HomePage.class
+com\qa\factory\DriverFactory.class
+com\qa\utils\WrapperFunctions.class
+com\pages\LoginPage.class
+com\qa\utils\ConfigReader.class
+com\pages\JobTitlePage.class
+com\qa\utils\ExcelReader.class
+com\pages\OrganizationLocationPage.class
+com\pages\UserPage.class

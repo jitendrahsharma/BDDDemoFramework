@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"This file contains scenarios for the Job Titles","To verify the functionality add the job title","SUCCESS","2021-07-15T07:47:33.561-04:00[America/New_York]","0.0","25.51"
+"This file contains scenarios for the Job Titles","To verify the functionality add the pay grade","SUCCESS","2021-07-15T07:47:59.088-04:00[America/New_York]","0.0","29.24"

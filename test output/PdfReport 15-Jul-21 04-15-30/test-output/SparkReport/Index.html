@@ -1,0 +1,760 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>BDDDemoFramework</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c43b89d03a7c43dae8bb8f0f078bad1997af6b3b/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">BDDDemoFramework Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Jul 15, 2021 04:15:30 AM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Jul 15, 2021 04:15:30 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Jul 15, 2021 04:17:50 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>4</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'>
+<b>4</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>7</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>60</b> steps passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"This file contains scenarios for the Job Titles":55.161,"Orangehrm Login Page feature":28.065,"This file contains scenarios for the Organization features":26.183,"This file contains scenarios for the Users":31.056
+};
+</script>
+<div class="row">
+<div class="col-md-4 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>build</td>
+<td>1.1</td>
+</tr>
+<tr>
+<td>user</td>
+<td>Jitendra</td>
+</tr>
+<tr>
+<td>AppName</td>
+<td>OrangeHRM</td>
+</tr>
+<tr>
+<td>os</td>
+<td>Windows</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 4,
+failParent: 0,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 7,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 60,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">This file contains scenarios for the Job Titles</p>
+            <p class="text-sm">
+              <span>04:15:30 AM</span> / <span>00:00:55:161</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">This file contains scenarios for the Job Titles</h5>
+<span class='badge badge-success'>07.15.2021 04:15:30</span>
+<span class='badge badge-danger'>07.15.2021 04:16:25</span>
+<span class='badge badge-default'>00:00:55:161</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>To verify the functionality add the job title</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>To verify the functionality add the job title</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user  is logged into OrangeHrms using valid credentials</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Go to Menu bar > Admin > Job > Job Title</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Job Titles screen should get open</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click on Add button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Add Job Title screen should get open</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter the Job Title "Automation Developer"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter the Job Description "To develop automated test scripts using selenium as the main testing tool and executing test cases"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And upload the Job Specification</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter the Note "Should have 4 years experience in automation testing"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click on Save button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Job title should get added</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="19"><span class="badge log pass-bg mr-2">Pass</span>To verify the functionality add the pay grade</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="20"><span class="badge log pass-bg mr-2">Pass</span>To verify the functionality add the pay grade</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user  is logged into OrangeHrms using valid credentials</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Go to Menu bar > Admin > Job >  Pay Grades</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Pay Grades screen should get open</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click on Add button of Pay Grades</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Add Pay Grades screen should get open</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter the name "Grade 9"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click on Save button of Pay Grades</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Pay Grades Name should get added</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Click on Add button of Assigned Currencies</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Currency "United States Dollar"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Minimum Salary "10000"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Maximum Salary "100000"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click on Save button of Add Currency</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click on Cancel button for Edit Pay Grade</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Pay Grade "Grade 9" and Currency "United States Dollar" should get added</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="40"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Orangehrm Login Page feature</p>
+            <p class="text-sm">
+              <span>04:16:25 AM</span> / <span>00:00:28:065</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Orangehrm Login Page feature</h5>
+<span class='badge badge-success'>07.15.2021 04:16:25</span>
+<span class='badge badge-danger'>07.15.2021 04:16:53</span>
+<span class='badge badge-default'>00:00:28:065</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=40</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="41"><span class="badge log pass-bg mr-2">Pass</span>Verify Login page title</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="parallel.LoginPageSteps.user_in_login_page()">
+                <span>Given user in login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="parallel.LoginPageSteps.user_gets_title_of_the_page()">
+                <span>When user gets title of the page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="parallel.LoginPageSteps.page_title_should_be(java.lang.String)">
+                <span>Then page title should be "OrangeHRM"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="49"><span class="badge log pass-bg mr-2">Pass</span>Verify forgot password link</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="parallel.LoginPageSteps.user_in_login_page()">
+                <span>Given user in login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="parallel.LoginPageSteps.user_gets_title_of_the_page()">
+                <span>When user gets title of the page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="parallel.LoginPageSteps.forgot_password_link_should_be_displayed(java.lang.String)">
+                <span>Then forgot password link should be "Forgot your password?" displayed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="57"><span class="badge log pass-bg mr-2">Pass</span>verify login with corrent credentials</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="parallel.LoginPageSteps.user_in_login_page()">
+                <span>Given user in login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="parallel.LoginPageSteps.user_enters_user_name(java.lang.String)">
+                <span>When user enters user name "Admin"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="parallel.LoginPageSteps.user_enters_password(java.lang.String)">
+                <span>And user enters password "admin123"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="parallel.LoginPageSteps.user_click_on_log_in_button()">
+                <span>And user click on Log in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="parallel.LoginPageSteps.user_is_on_home_page(java.lang.String)">
+                <span>Then user is on Home Page "OrangeHRM"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="67"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">This file contains scenarios for the Organization features</p>
+            <p class="text-sm">
+              <span>04:16:53 AM</span> / <span>00:00:26:183</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">This file contains scenarios for the Organization features</h5>
+<span class='badge badge-success'>07.15.2021 04:16:53</span>
+<span class='badge badge-danger'>07.15.2021 04:17:19</span>
+<span class='badge badge-default'>00:00:26:183</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=67</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="68"><span class="badge log pass-bg mr-2">Pass</span>To verify the functionality of add the location in the organizations</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="69"><span class="badge log pass-bg mr-2">Pass</span>To verify the functionality of add the location in the organizations</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user is logged into OrangeHrms using valid credentials</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Go to Menu bar > Admin > Organization > Locations</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Locations screen should get open</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click on Add button of Location</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Add Location screen should get open</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And add the location data from given sheetName "Locations" and rownumber 0</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click on Save button of the location</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Location  should get added in the organization</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="82"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">This file contains scenarios for the Users</p>
+            <p class="text-sm">
+              <span>04:17:19 AM</span> / <span>00:00:31:056</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">This file contains scenarios for the Users</h5>
+<span class='badge badge-success'>07.15.2021 04:17:19</span>
+<span class='badge badge-danger'>07.15.2021 04:17:50</span>
+<span class='badge badge-default'>00:00:31:056</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=82</span>
+</div>
+<div class="m-t-10 m-l-5">/*Background:
+*Given Provider Willis,Sam is logged into OrangeHRM application using valid credentials
+*|userName|password
+*|Admin|admin123
+*/</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="83"><span class="badge log pass-bg mr-2">Pass</span>To Verify able to add user in the application</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="parallel.UserPageSteps.user_is_on_home_page()">
+                <span>Given user is on Home Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="parallel.UserPageSteps.go_to_admin_menu_user_management_users()">
+                <span>When Go to Admin Menu >User Management > Users</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="parallel.UserPageSteps.system_users_screen_should_get_open_with(java.lang.String)">
+                <span>And system Users Screen should get Open with "System Users"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="parallel.UserPageSteps.click_on_add_button()">
+                <span>And click on Add button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="parallel.UserPageSteps.add_user_screen_should_get_open(java.lang.String)">
+                <span>And add user screen should get open "Add User"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="parallel.UserPageSteps.select_user_roll(java.lang.String)">
+                <span>And select User Roll "Admin"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="parallel.UserPageSteps.select_employee_name(java.lang.String)">
+                <span>And select employee name "Orange"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="parallel.UserPageSteps.enter_user_name(java.lang.String)">
+                <span>And enter User Name "TestUser"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="parallel.UserPageSteps.select_the_status(java.lang.String)">
+                <span>And select the status "Enabled"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="parallel.UserPageSteps.enter_the_password(java.lang.String)">
+                <span>And enter the password "Test123456!5@12"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="parallel.UserPageSteps.enter_the_confirm_password(java.lang.String)">
+                <span>And enter the confirm password "Test123456!5@12"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="parallel.UserPageSteps.click_on_save_button()">
+                <span>And click on save button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="parallel.UserPageSteps.go_to_system_user_secreen_search_user(java.lang.String)">
+                <span>And go to system user secreen search user "TestUser"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="parallel.UserPageSteps.click_on_serach_button()">
+                <span>And click on serach button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="parallel.UserPageSteps.verify_the_added_user_in_the_application(java.lang.String)">
+                <span>Then verify the added user in the application "TestUser"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@14e9bb345ef7e2ed3a102f271d84e9f0267c88e7/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

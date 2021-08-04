@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Orangehrm Login Page feature","Verify Login page title","SUCCESS","2021-07-15T07:48:28.339-04:00[America/New_York]","0.0","7.99"
+"Orangehrm Login Page feature","Verify forgot password link","SUCCESS","2021-07-15T07:48:36.337-04:00[America/New_York]","0.0","7.38"
+"Orangehrm Login Page feature","verify login with corrent credentials","SUCCESS","2021-07-15T07:48:43.726-04:00[America/New_York]","0.0","12.81"

@@ -1,0 +1,10 @@
+testrunners\MySerenityTestRunner.class
+parallel\UserPageSteps.class
+parallel\JobTitleSteps.class
+parallel\BaseClass.class
+appsHooks\ApplicationHooks.class
+parallel\OrganizationLocationSteps.class
+testrunners\TestRunner.class
+parallel\LoginPageSteps.class
+parallel\ParallelRun.class
+parallel\ApplicationHooks.class
